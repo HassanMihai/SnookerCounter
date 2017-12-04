@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Snooker Counter</string>
+    <string name="payer_one">Player One</string>
+    <string name="player_two">Player Two</string>
+    <string name="score_zero">0</string>
+    <string name="plus_one">+1</string>
+    <string name="plus_two">+2</string>
+    <string name="plus_three">+3</string>
+    <string name="plus_four">+4</string>
+    <string name="plus_five">+5</string>
+    <string name="plus_six">+6</string>
+    <string name="plus_seven">+7</string>
+    <string name="fault_four">Fault 4</string>
+    <string name="fault_five">Fault 5</string>
+    <string name="fault_six">Fault 6</string>
+    <string name="fault_seven">Fault 7</string>
+    <string name="reset">Reset</string>
+    <string name="undo">Undo</string>
+    <string name="fifteen">15</string>
+    <string name="on_table">on table</string>
+</resources>

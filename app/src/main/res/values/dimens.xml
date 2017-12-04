@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="player_padding">4dp</dimen>
+    <dimen name="player_textSize">14sp</dimen>
+    <dimen name="score_marginBottom">8dp</dimen>
+    <dimen name="score_marginTop">8dp</dimen>
+    <dimen name="score_padding">4dp</dimen>
+    <dimen name="score_textSize">56sp</dimen>
+    <dimen name="ballpoint_width">50dp</dimen>
+    <dimen name="ballpoint_margin">8dp</dimen>
+    <dimen name="fault_width">60dp</dimen>
+    <dimen name="fault_height">32dp</dimen>
+    <dimen name="fault_textSize">8sp</dimen>
+    <dimen name="reset_height">40dp</dimen>
+    <dimen name="reset_marginLeft">18dp</dimen>
+    <dimen name="redballs_width">30dp</dimen>
+    <dimen name="redballs_height">30dp</dimen>
+    <dimen name="redballs_marginRight">3dp</dimen>
+    <dimen name="undo_height">40dp</dimen>
+    <dimen name="undo_marginRight">18dp</dimen>
+</resources>

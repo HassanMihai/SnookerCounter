@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/snookertable"
+    android:paddingBottom="@dimen/padding_16"
+    android:paddingLeft="@dimen/padding_8"
+    android:paddingRight="@dimen/padding_8"
+    android:paddingTop="@dimen/padding_16"
+    tools:context="com.example.android.snookercounter.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/player_padding"
+                android:text="@string/payer_one"
+                android:textColor="@color/white"
+                android:textSize="@dimen/player_textSize" />
+
+            <TextView
+                android:id="@+id/player_one_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/score_marginBottom"
+                android:layout_marginTop="@dimen/score_marginTop"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/score_padding"
+                android:text="@string/score_zero"
+                android:textColor="@color/black"
+                android:textSize="@dimen/score_textSize" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="@dimen/ballpoint_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ballpoint_margin"
+                    android:background="@drawable/redball"
+                    android:onClick="redBallForPlayerOne"
+                    android:text="@string/plus_one"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:layout_width="@dimen/ballpoint_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ballpoint_margin"
+                    android:background="@drawable/yellowball"
+                    android:onClick="yellowBallForPlayerOne"
+                    android:text="@string/plus_two"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="@dimen/ballpoint_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ballpoint_margin"
+                    android:background="@drawable/greenball"
+                    android:onClick="greenBallForPlayerOne"
+                    android:text="@string/plus_three"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:layout_width="@dimen/ballpoint_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ballpoint_margin"
+                    android:background="@drawable/brownball"
+                    android:onClick="brownBallForPlayerOne"
+                    android:text="@string/plus_four"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="@dimen/ballpoint_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ballpoint_margin"
+                    android:background="@drawable/blueball"
+                    android:onClick="blueBallForPlayerOne"
+                    android:text="@string/plus_five"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:layout_width="@dimen/ballpoint_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ballpoint_margin"
+                    android:background="@drawable/pinkball"
+                    android:onClick="pinkBallForPlayerOne"
+                    android:text="@string/plus_six"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="@dimen/ballpoint_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ballpoint_margin"
+                    android:background="@drawable/blackball"
+                    android:onClick="blackBallForPlayerOne"
+                    android:text="@string/plus_seven"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="9dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="@dimen/fault_width"
+                    android:layout_height="@dimen/fault_height"
+                    android:onClick="faultFourForPlayerOne"
+                    android:text="@string/fault_four"
+                    android:textColor="#000"
+                    android:textSize="@dimen/fault_textSize" />
+
+                <Button
+                    android:layout_width="@dimen/fault_width"
+                    android:layout_height="@dimen/fault_height"
+                    android:onClick="faultFiveForPlayerOne"
+                    android:text="@string/fault_five"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fault_textSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="@dimen/fault_width"
+                    android:layout_height="@dimen/fault_height"
+                    android:onClick="faultSixForPlayerOne"
+                    android:text="@string/fault_six"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fault_textSize" />
+
+                <Button
+                    android:layout_width="@dimen/fault_width"
+                    android:layout_height="@dimen/fault_height"
+                    android:onClick="faultSevenPlayerOne"
+                    android:text="@string/fault_seven"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fault_textSize" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/player_padding"
+                android:text="@string/player_two"
+                android:textColor="@color/white"
+                android:textSize="@dimen/player_textSize" />
+
+            <TextView
+                android:id="@+id/player_two_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/score_marginBottom"
+                android:layout_marginTop="@dimen/score_marginTop"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/score_padding"
+                android:text="@string/score_zero"
+                android:textColor="@color/black"
+                android:textSize="@dimen/score_textSize" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="@dimen/ballpoint_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ballpoint_margin"
+                    android:background="@drawable/redball"
+                    android:onClick="redBallForPlayerTwo"
+                    android:text="@string/plus_one"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:layout_width="@dimen/ballpoint_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ballpoint_margin"
+                    android:background="@drawable/yellowball"
+                    android:onClick="yellowBallForPlayerTwo"
+                    android:text="@string/plus_two"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="@dimen/ballpoint_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ballpoint_margin"
+                    android:background="@drawable/greenball"
+                    android:onClick="greenBallForPlayerTwo"
+                    android:text="@string/plus_three"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:layout_width="@dimen/ballpoint_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ballpoint_margin"
+                    android:background="@drawable/brownball"
+                    android:onClick="brownBallForPlayerTwo"
+                    android:text="@string/plus_four"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="@dimen/ballpoint_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ballpoint_margin"
+                    android:background="@drawable/blueball"
+                    android:onClick="blueBallForPlayerTwo"
+                    android:text="@string/plus_five"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:layout_width="@dimen/ballpoint_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ballpoint_margin"
+                    android:background="@drawable/pinkball"
+                    android:onClick="pinkBallForPlayerTwo"
+                    android:text="@string/plus_six"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="@dimen/ballpoint_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ballpoint_margin"
+                    android:background="@drawable/blackball"
+                    android:onClick="blackBallForPlayerTwo"
+                    android:text="@string/plus_seven"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="9dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="@dimen/fault_width"
+                    android:layout_height="@dimen/fault_height"
+                    android:onClick="faultFourForPlayerTwo"
+                    android:text="@string/fault_four"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fault_textSize" />
+
+                <Button
+                    android:layout_width="@dimen/fault_width"
+                    android:layout_height="@dimen/fault_height"
+                    android:onClick="faultFiveForPlayerTwo"
+                    android:text="@string/fault_five"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fault_textSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="@dimen/fault_width"
+                    android:layout_height="@dimen/fault_height"
+                    android:onClick="faultSixForPlayerTwo"
+                    android:text="@string/fault_six"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fault_textSize" />
+
+                <Button
+                    android:layout_width="@dimen/fault_width"
+                    android:layout_height="@dimen/fault_height"
+                    android:onClick="faultSevenPlayerTwo"
+                    android:text="@string/fault_seven"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fault_textSize" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/reset_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/reset_marginLeft"
+        android:backgroundTint="@color/reset"
+        android:drawableLeft="@drawable/ic_refresh_white_18dp"
+        android:onClick="resetScore"
+        android:text="@string/reset"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/red_balls"
+            android:layout_width="@dimen/redballs_width"
+            android:layout_height="@dimen/redballs_height"
+            android:layout_marginRight="@dimen/redballs_marginRight"
+            android:background="@drawable/redball"
+            android:gravity="center"
+            android:text="@string/fifteen"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/on_table"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/undo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/undo_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/undo_marginRight"
+        android:backgroundTint="@color/undo"
+        android:drawableLeft="@drawable/ic_undo_white_18dp"
+        android:onClick="undoScore"
+        android:text="@string/undo"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

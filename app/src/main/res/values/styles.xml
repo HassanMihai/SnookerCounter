@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!-- Primary theme color of the app (sets background color of app bar) -->
+        <item name="colorPrimaryDark">#43A047</item>
+        <item name="colorPrimary">#43A047</item>
+    </style>
+
+</resources>
