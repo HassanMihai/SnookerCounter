@@ -7,6 +7,12 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    static final String SCORE_PLAYER1 = "scorePlayerOne";
+    static final String SCORE_PLAYER2 = "scorePlayerTwo";
+    static final String RED_BALLS = "redBalls";
+    static final String LAST_ACTIVITY = "lastActivity";
+    static final String LAST_ACTIVITY_PLAYER = "lastActivityPlayer";
+
     TextView scorePlayerOneTV;
     TextView scorePlayerTwoTV;
     TextView redBallsTV;
@@ -28,26 +34,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt("scorePlayerOne", scorePlayerOne);
-        outState.putInt("scorePlayerTwo", scorePlayerTwo);
-        outState.putInt("redBalls", redBalls);
-        outState.putInt("lastActivity", lastActivity);
-        outState.putInt("lastActivityPlayer", lastActivityPlayer);
+        outState.putInt(SCORE_PLAYER1, scorePlayerOne);
+        outState.putInt(SCORE_PLAYER2, scorePlayerTwo);
+        outState.putInt(RED_BALLS, redBalls);
+        outState.putInt(LAST_ACTIVITY, lastActivity);
+        outState.putInt(LAST_ACTIVITY_PLAYER, lastActivityPlayer);
     }
 
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        scorePlayerOne = savedInstanceState.getInt("scorePlayerOne");
-        scorePlayerTwo = savedInstanceState.getInt("scorePlayerTwo");
-        redBalls = savedInstanceState.getInt("redBalls");
-        lastActivity = savedInstanceState.getInt("lastActivity");
-        lastActivityPlayer = savedInstanceState.getInt("lastActivityPlayer");
+        scorePlayerOne = savedInstanceState.getInt(SCORE_PLAYER1);
+        scorePlayerTwo = savedInstanceState.getInt(SCORE_PLAYER2);
+        redBalls = savedInstanceState.getInt(RED_BALLS);
+        lastActivity = savedInstanceState.getInt(LAST_ACTIVITY);
+        lastActivityPlayer = savedInstanceState.getInt(LAST_ACTIVITY_PLAYER);
         displayScoreForPlayerOne();
         displayScoreForPlayerTwo();
         displayRedBalls();
     }
 
+    /**
+     * Add 1 point for Player One.
+     */
     public void redBallForPlayerOne(View v) {
         if (redBalls > 0) {
             scorePlayerOne = scorePlayerOne + 1;
@@ -59,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
         displayRedBalls();
     }
 
+    /**
+     * Add 1 point for Player Two.
+     */
     public void redBallForPlayerTwo(View v) {
         if (redBalls > 0) {
             scorePlayerTwo = scorePlayerTwo + 1;
@@ -70,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
         displayRedBalls();
     }
 
+    /**
+     * Add 2 points for Player One.
+     */
     public void yellowBallForPlayerOne(View v) {
         scorePlayerOne = scorePlayerOne + 2;
         lastActivity = 2;
@@ -77,6 +92,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerOne();
     }
 
+    /**
+     * Add 2 points for Player Two.
+     */
     public void yellowBallForPlayerTwo(View v) {
         scorePlayerTwo = scorePlayerTwo + 2;
         lastActivity = 2;
@@ -84,6 +102,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerTwo();
     }
 
+    /**
+     * Add 3 points for Player One.
+     */
     public void greenBallForPlayerOne(View v) {
         scorePlayerOne = scorePlayerOne + 3;
         lastActivity = 3;
@@ -91,6 +112,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerOne();
     }
 
+    /**
+     * Add 3 points for Player Two.
+     */
     public void greenBallForPlayerTwo(View v) {
         scorePlayerTwo = scorePlayerTwo + 3;
         lastActivity = 3;
@@ -98,6 +122,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerTwo();
     }
 
+    /**
+     * Add 4 points for Player One.
+     */
     public void brownBallForPlayerOne(View v) {
         scorePlayerOne = scorePlayerOne + 4;
         lastActivity = 4;
@@ -105,6 +132,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerOne();
     }
 
+    /**
+     * Add 4 points for Player Two.
+     */
     public void brownBallForPlayerTwo(View v) {
         scorePlayerTwo = scorePlayerTwo + 4;
         lastActivity = 4;
@@ -112,6 +142,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerTwo();
     }
 
+    /**
+     * Add 5 points for Player One.
+     */
     public void blueBallForPlayerOne(View v) {
         scorePlayerOne = scorePlayerOne + 5;
         lastActivity = 5;
@@ -119,6 +152,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerOne();
     }
 
+    /**
+     * Add 5 points for Player Two.
+     */
     public void blueBallForPlayerTwo(View v) {
         scorePlayerTwo = scorePlayerTwo + 5;
         lastActivity = 5;
@@ -126,6 +162,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerTwo();
     }
 
+    /**
+     * Add 6 points for Player One.
+     */
     public void pinkBallForPlayerOne(View v) {
         scorePlayerOne = scorePlayerOne + 6;
         lastActivity = 6;
@@ -133,6 +172,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerOne();
     }
 
+    /**
+     * Add 6 points for Player Two.
+     */
     public void pinkBallForPlayerTwo(View v) {
         scorePlayerTwo = scorePlayerTwo + 6;
         lastActivity = 6;
@@ -140,6 +182,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerTwo();
     }
 
+    /**
+     * Add 7 points for Player One.
+     */
     public void blackBallForPlayerOne(View v) {
         scorePlayerOne = scorePlayerOne + 7;
         lastActivity = 7;
@@ -147,6 +192,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerOne();
     }
 
+    /**
+     * Add 7 points for Player One.
+     */
     public void blackBallForPlayerTwo(View v) {
         scorePlayerTwo = scorePlayerTwo + 7;
         lastActivity = 7;
@@ -154,6 +202,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerTwo();
     }
 
+    /**
+     * Add 4 fault points for Player Two.
+     */
     public void faultFourForPlayerOne(View v) {
         scorePlayerTwo = scorePlayerTwo + 4;
         lastActivity = 4;
@@ -161,6 +212,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerTwo();
     }
 
+    /**
+     * Add 4 fault points for Player One.
+     */
     public void faultFourForPlayerTwo(View v) {
         scorePlayerOne = scorePlayerOne + 4;
         lastActivity = 4;
@@ -168,6 +222,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerOne();
     }
 
+    /**
+     * Add 5 fault points for Player Two.
+     */
     public void faultFiveForPlayerOne(View v) {
         scorePlayerTwo = scorePlayerTwo + 5;
         lastActivity = 5;
@@ -175,6 +232,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerTwo();
     }
 
+    /**
+     * Add 5 fault points for Player One.
+     */
     public void faultFiveForPlayerTwo(View v) {
         scorePlayerOne = scorePlayerOne + 5;
         lastActivity = 5;
@@ -182,6 +242,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerOne();
     }
 
+    /**
+     * Add 6 fault points for Player Two.
+     */
     public void faultSixForPlayerOne(View v) {
         scorePlayerTwo = scorePlayerTwo + 6;
         lastActivity = 6;
@@ -189,6 +252,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerTwo();
     }
 
+    /**
+     * Add 6 fault points for Player One.
+     */
     public void faultSixForPlayerTwo(View v) {
         scorePlayerOne = scorePlayerOne + 6;
         lastActivity = 6;
@@ -196,6 +262,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerOne();
     }
 
+    /**
+     * Add 7 fault points for Player Two.
+     */
     public void faultSevenPlayerOne(View v) {
         scorePlayerTwo = scorePlayerTwo + 7;
         lastActivity = 7;
@@ -203,6 +272,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerTwo();
     }
 
+    /**
+     * Add 4 fault points for Player One.
+     */
     public void faultSevenPlayerTwo(View v) {
         scorePlayerOne = scorePlayerOne + 7;
         lastActivity = 7;
@@ -210,6 +282,9 @@ public class MainActivity extends AppCompatActivity {
         displayScoreForPlayerOne();
     }
 
+    /**
+     * Reset the score for both players.
+     */
     public void resetScore(View v) {
         scorePlayerOne = 0;
         scorePlayerTwo = 0;
@@ -219,6 +294,9 @@ public class MainActivity extends AppCompatActivity {
         displayRedBalls();
     }
 
+    /**
+     * Remove the last added points from player.
+     */
     public void undoScore(View v) {
         if (lastActivityPlayer == 1) {
             if (scorePlayerOne > 0) {
@@ -248,21 +326,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given score for Player One.
+     * Displays the score for Player One.
      */
     public void displayScoreForPlayerOne() {
         scorePlayerOneTV.setText(String.valueOf(scorePlayerOne));
     }
 
     /**
-     * Displays the given score for Player Two.
+     * Displays the score for Player Two.
      */
     public void displayScoreForPlayerTwo() {
         scorePlayerTwoTV.setText(String.valueOf(scorePlayerTwo));
     }
 
     /**
-     * Displays the Red Balls on table.
+     * Displays the remaining Red Balls on table.
      */
     public void displayRedBalls() {
         redBallsTV.setText(String.valueOf(redBalls));
